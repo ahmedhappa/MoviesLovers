@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "864231205844",
+    "firebase_url": "https://movielovers-c7528.firebaseio.com",
+    "project_id": "movielovers-c7528",
+    "storage_bucket": "movielovers-c7528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864231205844:android:16e3508bcc7b3b03",
+        "android_client_info": {
+          "package_name": "com.example.ahmed.movielovers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864231205844-vnea7u2sacjl3h57cb6oo81nq6nt7obg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ahmed.movielovers",
+            "certificate_hash": "31c94315649c6a16166b2621ec29ddd27337946d"
+          }
+        },
+        {
+          "client_id": "864231205844-r8emuk6m1aidiu490siv8qrjqc19r1m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDavetoOm37tjz_Y3zqLmUqsuNWRQKx4mY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864231205844-r8emuk6m1aidiu490siv8qrjqc19r1m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

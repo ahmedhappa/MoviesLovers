@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MovieLovers</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="login_with_gmail">Login with Gmail</string>
+    <string name="email">E-mail</string>
+    <string name="age">Age</string>
+    <string name="sign_up">sign up</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
