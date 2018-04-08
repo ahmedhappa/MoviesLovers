@@ -2,7 +2,6 @@ package com.example.ahmed.movielovers.Controller.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +41,6 @@ public class SignUp extends AppCompatActivity {
                 List<Object> objects = (List<Object>) dataSnapshot.child("users").getValue();
                 if (objects == null) {
                     userId[0] = 0;
-                    Log.e("why","leh");
                 } else {
                     userId[0] = objects.size();
                 }
@@ -61,10 +59,10 @@ public class SignUp extends AppCompatActivity {
                 String pass = password.getText().toString();
                 String mail = email.getText().toString();
                 if (!name.equals("") && !pass.equals("") && !mail.equals("") && !age.getText().toString().equals("")) {
-                    Log.e("a77oooo", userId[0] +"");
                     int ag = Integer.parseInt(age.getText().toString());
                     User user = new User(userId[0], ag, name, pass, mail);
                     databaseReference.child("users").child(userId[0] + "").setValue(user);
+                    Toast.makeText(getApplicationContext(), "You Signed up successfully", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "Pleas fill all the data", Toast.LENGTH_SHORT).show();
                 }

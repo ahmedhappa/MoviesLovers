@@ -8,4 +8,23 @@
     <string name="age">Age</string>
     <string name="sign_up">sign up</string>
     <string name="title_activity_maps">Map</string>
+    <string name="book">Book</string>
+    <string name="movie_detail">Movie Detail</string>
+    <string name="movie_cinemas">Movie Cinemas</string>
+    <string name="rate">Rate : </string>
+    <string name="description">Description</string>
+    <string name="movie_name">Movie Name : </string>
+    <string name="cinema_name">Cinema Name : </string>
+    <string name="date">Date :</string>
+    <string name="location">Location :</string>
+    <string name="ticket_price">Ticket Price</string>
+    <string name="number_of_people">Number Of People</string>
+    <string name="total_price">Total Price</string>
+    <string name="review_order">Review Order</string>
+    <string name="order">Order</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="cinema_map_location">Cinema Map Location</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
 </resources>

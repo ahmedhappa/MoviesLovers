@@ -11,8 +11,7 @@ public class User implements Parcelable {
     private int id, age;
     private String userName, password, email;
 
-    public User() {
-    }
+
 
     public User(int id, int age, String userName, String password, String email) {
         this.id = id;
@@ -22,12 +21,7 @@ public class User implements Parcelable {
         this.email = email;
     }
 
-    public User(String userName, String password, String email, int age) {
-        this.age = age;
-        this.userName = userName;
-        this.password = password;
-        this.email = email;
-    }
+
 
     public int getId() {
         return id;
@@ -43,14 +37,6 @@ public class User implements Parcelable {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public String getPassword() {
@@ -83,7 +69,7 @@ public class User implements Parcelable {
         parcel.writeString(email);
     }
 
-    protected User(Parcel in) {
+    private User(Parcel in) {
         id = in.readInt();
         age = in.readInt();
         userName = in.readString();

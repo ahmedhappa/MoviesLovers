@@ -4,6 +4,13 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,17 +18,55 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.Activities.HomeActivity"/>
-        <activity android:name=".Controller.Activities.LoginActivity">
+        <activity
+            android:name=".Controller.Activities.HomeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Controller.Activities.LoginActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Controller.Activities.SignUp" />
+        <activity
+            android:name=".Controller.Activities.SignUp"
+            android:parentActivityName=".Controller.Activities.LoginActivity" />
+        <activity
+            android:name=".Controller.Activities.DetailedActivity"
+            android:parentActivityName=".Controller.Activities.HomeActivity" />
+        <activity android:name=".Controller.Activities.Reservation" />
 
+        <provider
+            android:name=".Model.MyContentProvider"
+            android:authorities="com.example.ahmed.movielovers.Model.MyContentProvider"
+            android:exported="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
+        <activity
+            android:name=".Controller.Activities.MapsActivity"
+            android:label="@string/title_activity_maps" />
+
+        <receiver android:name=".Controller.AppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
