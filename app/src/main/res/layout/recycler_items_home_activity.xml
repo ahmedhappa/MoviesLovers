@@ -52,7 +52,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|center"
             android:layout_marginEnd="7dp"
-            android:layout_marginRight="7dp"
             android:background="@drawable/buttons_background"
             android:text="@string/book"
             android:textColor="@color/colorPrimary" />

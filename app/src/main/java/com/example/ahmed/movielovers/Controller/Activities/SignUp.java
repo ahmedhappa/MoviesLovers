@@ -1,6 +1,7 @@
 package com.example.ahmed.movielovers.Controller.Activities;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -32,6 +33,13 @@ public class SignUp extends AppCompatActivity {
         age = findViewById(R.id.sign_up_age);
         signUp = findViewById(R.id.sign_up_button);
 
+        if (savedInstanceState != null) {
+            userName.setText(savedInstanceState.getString("user_name"));
+            password.setText(savedInstanceState.getString("user_password"));
+            email.setText(savedInstanceState.getString("user_email"));
+            age.setText(savedInstanceState.getString("user_age"));
+        }
+
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference databaseReference = firebaseDatabase.getReference();
         final int[] userId = new int[1];
@@ -62,12 +70,21 @@ public class SignUp extends AppCompatActivity {
                     int ag = Integer.parseInt(age.getText().toString());
                     User user = new User(userId[0], ag, name, pass, mail);
                     databaseReference.child("users").child(userId[0] + "").setValue(user);
-                    Toast.makeText(getApplicationContext(), "You Signed up successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.sign_up_success), Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(getApplicationContext(), "Pleas fill all the data", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.data_fill), Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("user_name", userName.getText().toString());
+        outState.putString("user_password", password.getText().toString());
+        outState.putString("user_email", email.getText().toString());
+        outState.putString("user_age", age.getText().toString());
     }
 }

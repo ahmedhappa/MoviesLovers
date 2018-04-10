@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                                     finish();
                                     break;
                                 } else if (i == usersData.size() - 1) {
-                                    Toast.makeText(getApplicationContext(), "You are not a user in this application pleas sign up", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), getString(R.string.login_fail), Toast.LENGTH_LONG).show();
                                 }
                             }
                         }
@@ -123,7 +123,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             } catch (ApiException e) {
-                Log.i("Sign in Failure", "Google sign in failed", e);
+                Toast.makeText(this, getString(R.string.google_sign_fail), Toast.LENGTH_SHORT).show();
             }
         }
     }

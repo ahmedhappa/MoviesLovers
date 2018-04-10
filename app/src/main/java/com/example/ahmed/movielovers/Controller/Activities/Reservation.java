@@ -103,7 +103,7 @@ public class Reservation extends AppCompatActivity {
                     intent.putExtra("lng", cinema.getLng());
                     startActivity(intent);
                 } else {
-                    Toast.makeText(Reservation.this, "Try again Later", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Reservation.this, getString(R.string.try_again), Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -125,10 +125,10 @@ public class Reservation extends AppCompatActivity {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                    Toast.makeText(Reservation.this, "Operation done . Enjoy", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Reservation.this, getString(R.string.operation_done), Toast.LENGTH_SHORT).show();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Toast.makeText(Reservation.this, "Operation failed Please try again later", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Reservation.this, getString(R.string.operation_fail), Toast.LENGTH_SHORT).show();
                 }
 
             }

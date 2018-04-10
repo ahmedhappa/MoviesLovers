@@ -41,7 +41,7 @@ public class MovieDetails extends Fragment {
             date.setText(movie.getDate());
             description.setText(movie.getDescription());
         } else {
-            Toast.makeText(getActivity(), "Some thing went wrong please try again", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.try_again), Toast.LENGTH_SHORT).show();
         }
 
         return view;

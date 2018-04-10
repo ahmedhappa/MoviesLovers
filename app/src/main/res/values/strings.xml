@@ -27,4 +27,11 @@
     <string name="cinema_map_location">Cinema Map Location</string>
     <string name="up">Up</string>
     <string name="down">Down</string>
+    <string name="login_fail">You are not a user in this application pleas sign up</string>
+    <string name="google_sign_fail">Sign in with google account fails</string>
+    <string name="try_again">Some thing went wrong, Try again Later.</string>
+    <string name="operation_done">Operation done . Enjoy</string>
+    <string name="operation_fail">Operation failed Please try again later</string>
+    <string name="sign_up_success">You Signed up successfully</string>
+    <string name="data_fill">Pleas fill all the data</string>
 </resources>

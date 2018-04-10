@@ -63,7 +63,7 @@
         android:layout_marginTop="15dp"
         android:backgroundTint="@color/colorPrimary"
         android:hint="@string/age"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
         android:textColor="@color/colorPrimaryDark"
         android:textColorHint="@color/colorPrimaryDark"
         app:layout_constraintLeft_toLeftOf="parent"

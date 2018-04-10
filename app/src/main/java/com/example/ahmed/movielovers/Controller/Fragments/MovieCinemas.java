@@ -40,7 +40,7 @@ public class MovieCinemas extends Fragment implements OnClickCinemaBook {
             detailedRecyclerCinema.setAdapter(detailedCinemasAdapter);
             detailedCinemasAdapter.setOnClickCinemaBook(this);
         } else {
-            Toast.makeText(getActivity(), "Something went wrong please try again later", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.try_again), Toast.LENGTH_SHORT).show();
         }
 
         return view;
